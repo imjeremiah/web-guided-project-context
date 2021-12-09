@@ -6,7 +6,7 @@ const App = ()=> {
 
     return(<div className="App component">
         <h1>Main App</h1>
-        <SubComp1 person={person}/>
+        <SubComp1 person={person} setPerson={setPerson}/>
     </div>);
 };
 
@@ -30,8 +30,10 @@ const SubComp2 = (props) => {
 
 const SubComp3 = (props)=> {
     const { person } = props;
+
     return(<div className="component">
         <h2>SubComp3</h2>
+        <p>{`${person.location.street} ${person.location.city}, ${person.location.state}`}</p>
     </div>);
 }
 export default App;
