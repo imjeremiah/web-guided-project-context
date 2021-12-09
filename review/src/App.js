@@ -6,7 +6,6 @@ const PersonContext = createContext();
 const DogContext = createContext();
 
 const App = ()=> {
-    // const [person, setPerson] = useState(data);
     const [person, dispatch] = useReducer(reducer, initialState);
 
     return(
