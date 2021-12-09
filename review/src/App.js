@@ -12,11 +12,13 @@ const App = ()=> {
 
 const SubComp1 = (props) => {
     const { person } = props;
-    
+
+    console.log(person);
+
     return(<div className="component">
-        <h2>SubComp1</h2>
-        <p>{`${}`}
-        <SubComp2/>
+        {/* <h2>SubComp1</h2>
+        <p>{`${person.title} ${person.first} ${person.last}`}
+        <SubComp2/> */}
     </div>)
 }
 
