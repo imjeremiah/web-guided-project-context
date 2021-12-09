@@ -2,6 +2,7 @@ import React, { useState, createContext } from 'react';
 import data from './data';
 
 const PersonContext = createContext();
+console.log(PersonContext);
 
 const App = ()=> {
     const [person, setPerson] = useState(data);
