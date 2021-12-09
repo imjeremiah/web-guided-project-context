@@ -10,7 +10,7 @@ const App = ()=> {
     return(
         <div className="App component">
             <h1>Main App</h1>
-            <PersonContext.Provider value={person, setPerson}>
+            <PersonContext.Provider value={{person, setPerson}}>
                 <SubComp1 person={person} setPerson={setPerson}/>
             </PersonContext.Provider>
         </div>);
@@ -19,7 +19,7 @@ const App = ()=> {
 const SubComp1 = (props) => {
     const context = useContext(PersonContext);
     console.log(context);
-    
+
     const { person, setPerson } = props;
 
     return(<div className="component">
