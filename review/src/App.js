@@ -7,10 +7,13 @@ console.log(PersonContext);
 const App = ()=> {
     const [person, setPerson] = useState(data);
 
-    return(<div className="App component">
-        <h1>Main App</h1>
-        <SubComp1 person={person} setPerson={setPerson}/>
-    </div>);
+    return(
+        <div className="App component">
+            <h1>Main App</h1>
+            <PersonContext.Provider>
+                <SubComp1 person={person} setPerson={setPerson}/>
+            </PersonContext.Provider>
+        </div>);
 };
 
 const SubComp1 = (props) => {
