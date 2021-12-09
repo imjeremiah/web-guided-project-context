@@ -10,7 +10,7 @@ const App = ()=> {
     return(
         <div className="App component">
             <h1>Main App</h1>
-            <PersonContext.Provider>
+            <PersonContext.Provider value={person, setPerson}>
                 <SubComp1 person={person} setPerson={setPerson}/>
             </PersonContext.Provider>
         </div>);
