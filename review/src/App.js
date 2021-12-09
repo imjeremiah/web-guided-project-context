@@ -43,6 +43,17 @@ const SubComp2 = (props) => {
 const SubComp3 = (props)=> {
     const { person, setPerson } = props;
 
+    const handleClick = ()=> {
+        setPerson({
+            ...person,
+            name: {
+                title: "Mx",
+                first: "First",
+                last: "Last"
+            }
+        });
+    }
+
     return(<div className="component">
         <h2>SubComp3</h2>
         <button onClick={handleClick}>Change our Name</button>
