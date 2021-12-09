@@ -8,11 +8,12 @@ const DogContext = createContext();
 
 const App = ()=> {
     // const [person, setPerson] = useState(data);
+    const [person, dispatch] = useReducer(reducer, initialState);
 
     return(
         <div className="App component">
             <h1>Main App</h1>
-            <PersonContext.Provider value={{person, setPerson}}>
+            <PersonContext.Provider value={{person, dispatch}}>
                 <SubComp1/>
             </PersonContext.Provider>
         </div>);
