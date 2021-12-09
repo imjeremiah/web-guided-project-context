@@ -42,22 +42,15 @@ const SubComp2 = () => {
     return(<div className="component">
         <h2>SubComp2</h2>
         <button onClick={handleClick}>Change our location</button>
-        {/* <SubComp3 /> */}
+        <SubComp3 />
     </div>)
 }
 
 const SubComp3 = ()=> {
-    const { person, setPerson } = useContext(PersonContext);
+    const { person, dispatch } = useContext(PersonContext);
 
     const handleClick = ()=> {
-        setPerson({
-            ...person,
-            name: {
-                title: "Mx",
-                first: "First",
-                last: "Last"
-            }
-        });
+        dispatch(setName({title: "Mx", first: "First", last: "Last" }))
     }
 
     return(<div className="component">
