@@ -17,7 +17,13 @@ const SubComp1 = () => {
 const SubComp2 = () => {
     return(<div className="component">
         <h2>SubComp2</h2>
+        <SubComp3/>
     </div>)
 }
 
+const SubComp3 = ()=> {
+    return(<div className="component">
+        <h2>SubComp3</h2>
+    </div>);
+}
 export default App;
