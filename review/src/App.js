@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import data from '..data';
 
 const App = ()=> {
+    const [person, setPerson] = useState(data);
+    
     return(<div className="App component">
         <h1>Main App</h1>
         <SubComp1/>
