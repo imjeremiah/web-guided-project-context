@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useContext } from 'react';
 import data from './data';
 
 const PersonContext = createContext();
@@ -17,6 +17,9 @@ const App = ()=> {
 };
 
 const SubComp1 = (props) => {
+    const context = useContext(PersonContext);
+    console.log(context);
+    
     const { person, setPerson } = props;
 
     return(<div className="component">
