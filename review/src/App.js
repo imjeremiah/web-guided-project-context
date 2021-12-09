@@ -11,9 +11,7 @@ const App = ()=> {
         <div className="App component">
             <h1>Main App</h1>
             <PersonContext.Provider value={{person, setPerson}}>
-                <DogContext.Provider value={"charlysocks"}>
-                    <SubComp1/>
-                </DogContext.Provider>
+                <SubComp1/>
             </PersonContext.Provider>
         </div>);
 };
