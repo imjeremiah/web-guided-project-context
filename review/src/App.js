@@ -11,11 +11,19 @@ const App = ()=> {
 };
 
 const SubComp1 = (props) => {
-    const { person } = props;
+    const { person, setPerson } = props;
+
+    handleClick = ()=> {
+        setPerson({
+            ...person,
+            
+        });
+    }
 
     return(<div className="component">
         <h2>SubComp1</h2>
         <p>{`${person.name.title} ${person.name.first} ${person.name.last}`}
+        <button onClick={handleClick}>Change our location</button>
         <SubComp2 person={person}/> </p>
     </div>)
 }
