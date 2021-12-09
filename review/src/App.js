@@ -16,7 +16,7 @@ const App = ()=> {
         </div>);
 };
 
-const SubComp1 = (props) => {
+const SubComp1 = () => {
     const { person } = useContext(PersonContext);
 
     return(<div className="component">
@@ -26,8 +26,8 @@ const SubComp1 = (props) => {
     </div>)
 }
 
-const SubComp2 = (props) => {
-    const { person, setPerson } = props;
+const SubComp2 = () => {
+    const {person, setPerson} = useContext(PersonContext);
 
     const handleClick = ()=> {
         setPerson({
