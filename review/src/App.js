@@ -1,5 +1,4 @@
 import React, { useReducer, createContext, useContext } from 'react';
-import data from './data';
 import reducer, { initialState} from './reducer';
 import { setName, setLocation }  from './reducer';
 
@@ -30,7 +29,7 @@ const SubComp1 = () => {
 }
 
 const SubComp2 = () => {
-    const {person, dispatch} = useContext(PersonContext);
+    const {dispatch} = useContext(PersonContext);
 
     const handleClick = ()=> {
         dispatch(setLocation({
@@ -38,18 +37,8 @@ const SubComp2 = () => {
             city: "Philadelphia",
             state: "PA"
         }));
-
-        // setPerson({
-        //     ...person,
-        //     location: {
-        //         street: "222 N 22nd street",
-        //         city: "Philadelphia",
-        //         state: "PA"
-        //     }
-        // });
     }
 
-    console.log(person);
     return(<div className="component">
         <h2>SubComp2</h2>
         <button onClick={handleClick}>Change our location</button>
