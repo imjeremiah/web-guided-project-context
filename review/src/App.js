@@ -33,16 +33,23 @@ const SubComp2 = () => {
     const {person, dispatch} = useContext(PersonContext);
 
     const handleClick = ()=> {
-        setPerson({
-            ...person,
-            location: {
-                street: "222 N 22nd street",
-                city: "Philadelphia",
-                state: "PA"
-            }
-        });
+        dispatch(setLocation({
+            street: "222 N 22nd Street",
+            city: "Philadelphia",
+            state: "PA"
+        }));
+
+        // setPerson({
+        //     ...person,
+        //     location: {
+        //         street: "222 N 22nd street",
+        //         city: "Philadelphia",
+        //         state: "PA"
+        //     }
+        // });
     }
 
+    console.log(person);
     return(<div className="component">
         <h2>SubComp2</h2>
         <button onClick={handleClick}>Change our location</button>
