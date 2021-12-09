@@ -10,6 +10,13 @@ const App = ()=> {
 const SubComp1 = () => {
     return(<div className="component">
         <h2>SubComp1</h2>
+        <SubComp2/>
+    </div>)
+}
+
+const SubComp2 = () => {
+    return(<div className="component">
+        <h2>SubComp2</h2>
     </div>)
 }
 
