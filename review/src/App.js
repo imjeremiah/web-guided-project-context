@@ -2,7 +2,7 @@ import React, { useState, createContext, useContext } from 'react';
 import data from './data';
 
 const PersonContext = createContext();
-console.log(PersonContext);
+const DogContext = createContext();
 
 const App = ()=> {
     const [person, setPerson] = useState(data);
