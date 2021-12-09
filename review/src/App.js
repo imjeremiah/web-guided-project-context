@@ -17,15 +17,12 @@ const App = ()=> {
 };
 
 const SubComp1 = (props) => {
-    const context = useContext(PersonContext);
-    console.log(context);
-
-    const { person, setPerson } = props;
+    const { person } = useContext(PersonContext);
 
     return(<div className="component">
         <h2>SubComp1</h2>
-        <p>{`${context.person.name.title} ${context.person.name.first} ${context.person.name.last}`}
-        <SubComp2 person={context.person} setPerson={setPerson}/> </p>
+        <p>{`${person.name.title} ${person.name.first} ${person.name.last}`}
+        {/* <SubComp2 person={person} setPerson={setPerson}/> </p> */}
     </div>)
 }
 
