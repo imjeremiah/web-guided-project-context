@@ -10,9 +10,12 @@ const App = ()=> {
     </div>);
 };
 
-const SubComp1 = () => {
+const SubComp1 = (props) => {
+    const { person } = props;
+    
     return(<div className="component">
         <h2>SubComp1</h2>
+        <p>{`${}`}
         <SubComp2/>
     </div>)
 }
