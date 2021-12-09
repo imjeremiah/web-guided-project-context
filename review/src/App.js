@@ -3,7 +3,6 @@ import  { reducer, initialState} from './reducer';
 import { setName, setLocation }  from './reducer';
 
 const PersonContext = createContext();
-const DogContext = createContext();
 
 const App = ()=> {
     const [person, dispatch] = useReducer(reducer, initialState);
