@@ -10,7 +10,7 @@ const App = ()=> {
     return(
         <div className="App component">
             <h1>Main App</h1>
-            <PersonContext.Provider value={{person, setPerson}}>
+            <PersonContext.Provider value={{person, setPerson, extraStuff: "Warren"}}>
                 <SubComp1/>
             </PersonContext.Provider>
         </div>);
@@ -27,7 +27,7 @@ const SubComp1 = () => {
 }
 
 const SubComp2 = () => {
-    const {person, setPerson} = useContext(PersonContext);
+    const {person, setPerson, extraStuff} = useContext(PersonContext);
 
     const handleClick = ()=> {
         setPerson({
@@ -41,7 +41,7 @@ const SubComp2 = () => {
     }
 
     return(<div className="component">
-        <h2>SubComp2</h2>
+        <h2>SubComp2 {extraStuff}</h2>
         <button onClick={handleClick}>Change our location</button>
         <SubComp3 />
     </div>)
