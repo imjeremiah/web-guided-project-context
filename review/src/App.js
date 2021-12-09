@@ -13,10 +13,14 @@ const App = ()=> {
 const SubComp1 = (props) => {
     const { person, setPerson } = props;
 
-    handleClick = ()=> {
+    const handleClick = ()=> {
         setPerson({
             ...person,
-            
+            location: {
+                street: "222 N 22nd street",
+                city: "Philadelphia",
+                state: "PA"
+            }
         });
     }
 
